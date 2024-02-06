@@ -1,0 +1,12 @@
+.sortable-wrapper {
+    position: relative;
+
+    .sortable-item {
+        position: relative;
+        max-width: 30rem;
+
+        .sortable-nested {
+            padding-left: 3rem;
+        }
+    }
+}

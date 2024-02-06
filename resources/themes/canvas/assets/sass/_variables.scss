@@ -1,0 +1,242 @@
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900) !default;
+
+// overwrite
+$primary: #FA8617;
+$secondary: #26282D;
+$danger: #E9555D;
+$success: #0db670;
+$warning: #ff9b05;
+$info: #67B3FF;
+$body-bg: #F2F3F4;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+
+// Prefix for :root CSS variables
+
+$variable-prefix: bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix: $variable-prefix !default;
+
+$theme-colors: (
+    primary: $primary,
+    secondary: $secondary,
+    danger: $danger,
+    success: $success,
+    warning: $warning,
+    info: $info,
+    dark: $dark,
+    // light: $light,
+);
+
+// custom
+$text-color: #26282D;
+$text-light: #858B97;
+$border-color: #E8E8E8;
+$link-color: #0180fe;
+$input-bg: #F7F7F7;
+$icon-color: #E8E8E8;
+
+// dark mode colors
+// ------ color style 2
+// $primary-dark:               #1E1E1E;
+// $secondary-dark:             #2C2C2C;
+
+// ------ color style 3
+// $primary-dark:               #0D1117;
+// $secondary-dark:             #161B22;
+
+// ------ color style 4
+// $primary-dark:               #080717;
+// $secondary-dark:             #131220;
+
+// ------ color style 1
+$primary-dark: #1A1927;
+$secondary-dark: #232230;
+
+$dark-border-color: #272634;
+$dark-text-color: #dbdbdb;
+
+// custom color
+// $custom-colors: (
+//     text-color: $text-color,
+//     icon-color: $icon-color,
+//     text-light: $text-light,
+//     link-color: $link-color,
+//     input-bg: $input-bg,
+//    body-bg: $body-bg,
+
+//     // dark color
+//     primary-dark: $primary-dark,
+//     secondary-dark: $secondary-dark,
+//     dark-border-color: $dark-border-color,
+//     dark-text-color: $dark-text-color,
+// );
+// $theme-colors: map-merge($theme-colors, $custom-colors);
+
+:root {
+    --#{$prefix}text-color: #{$text-color};
+    --#{$prefix}icon-color: #{$icon-color};
+    --#{$prefix}text-light: #{$text-light};
+    --#{$prefix}link-color: #{$link-color};
+    --#{$prefix}input-bg: #{$input-bg};
+    --#{$prefix}body-bg: #{$body-bg};
+
+    // dark color
+    --#{$prefix}primary-dark: #{$primary-dark};
+    --#{$prefix}secondary-dark: #{$secondary-dark};
+    --#{$prefix}dark-border-color: #{$dark-border-color};
+    --#{$prefix}dark-text-color: #{$dark-text-color};
+}
+
+
+// font-size overwrite
+$font-size-base: .875rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: .75rem !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+
+$headings-font-weight: 600 !default;
+$h1-font-size: 1.5rem !default;
+$h2-font-size: 1.25rem !default;
+$h3-font-size: 1.125rem !default;
+$h4-font-size: 1rem !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+// input overwrite
+$input-btn-padding-y: .56rem !default;
+$input-btn-padding-x: 1.25rem !default;
+$input-bg: $input-bg !default;
+$input-btn-font-size: $font-size-base !default;
+$input-color: $text-light !default;
+
+$input-height: 42px !default;
+$input-height-sm: 32px !default;
+$input-height-lg: 52px !default;
+
+$input-border-radius: .375rem !default;
+$input-border-radius-sm: $input-border-radius !default;
+$input-border-radius-lg: $input-border-radius !default;
+
+
+$card-box-shadow: 0px 3px 5px 0px #00000024;
+
+// Pagination
+$pagination-hover-bg: transparent !important;
+$pagination-bg: transparent !important;
+$pagination-focus-outline: none !default;
+$pagination-focus-bg: transparent !important;
+$pagination-focus-box-shadow: none !default;
+$pagination-color: $primary;
+$pagination-color: $text-light;
+$pagination-hover-color: $primary;
+$pagination-hover-border-color: $primary;
+$pagination-border-color: transparent !important;
+$pagination-focus-color: $text-light;
+
+$pagination-border-radius: 50% !default;
+$pagination-border-radius-sm: 50% !default;
+$pagination-border-radius-lg: 50% !default;
+$pagination-disabled-bg: #bcbcbc36;
+$pagination-disabled-border-color: transparent;
+
+$nav-link-padding-y: .5rem !default;
+$nav-link-padding-x: 1rem !default;
+$nav-link-font-size: inherit !default;
+$nav-link-font-weight: 500 !default;
+$nav-link-color: var(--#{$prefix}text-color) !default;
+$nav-link-hover-color: var(--#{$prefix}primary) !default;
+$nav-link-transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out !default;
+$nav-link-disabled-color: $gray-600 !default;
+
+
+$nav-tabs-border-color: var(--#{$prefix}border-color);
+// $nav-tabs-border-width: $border-width;
+// $nav-tabs-border-radius: $border-radius;
+$nav-tabs-link-hover-border-color: var(--#{$prefix}border-color) var(--#{$prefix}border-color) $nav-tabs-border-color;
+$nav-tabs-link-active-color: $primary;
+$nav-tabs-link-active-bg: transparent;
+$nav-tabs-link-active-border-color: var(--#{$prefix}border-color) var(--#{$prefix}border-color) var(--#{$prefix}white);
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem !default;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    ) !default;
+
+// scss-docs-end spacer-variables-maps
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+$grid-row-columns: 6 !default;
+
+$gutters: $spacers !default;
+
+// Container padding
+
+$container-padding-x: $grid-gutter-width !default;
+
+// scss-docs-start toast-variables
+$toast-max-width: 350px !default;
+$toast-padding-x: .75rem !default;
+$toast-padding-y: .5rem !default;
+$toast-font-size: .875rem !default;
+$toast-color: null !default;
+$toast-background-color: rgba($white, .85) !default;
+$toast-border-width: 1px !default;
+$toast-border-color: rgba(0, 0, 0, .1) !default;
+$toast-border-radius: 3px !default;
+$toast-spacing: $grid-gutter-width * .25 !default;
+
+$toast-header-color: $gray-600 !default;
+$toast-header-background-color: rgba($white, .85) !default;
+$toast-header-border-color: rgba(0, 0, 0, .05) !default;
+// scss-docs-end toast-variables
+
+// bootstrap
+// @import 'bootstrap';
+$breadcrumb-font-size: null;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 10px;
+$breadcrumb-item-padding-x: .5rem;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-bg: null;
+$breadcrumb-divider-color: $gray-600;
+$breadcrumb-active-color: $gray-600;
+$breadcrumb-divider: quote("/");
+$breadcrumb-divider-flipped: $breadcrumb-divider;
+$breadcrumb-border-radius: null;

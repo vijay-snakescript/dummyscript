@@ -1,0 +1,112 @@
+// Range Slider
+$range-width: 100% !default;
+
+$range-handle-color: var(--#{$prefix}primary) !default;
+$range-handle-color-hover: var(--#{$prefix}primary) !default;
+$range-handle-size: 16px !default;
+$range-handle-hover-size: 26px !default;
+
+$range-track-color: var(--#{$prefix}gray-100) !default;
+$range-track-height: 4px !default;
+
+$range-label-color: var(--#{$prefix}primary) !default;
+$range-label-width: 60px !default;
+
+.range-slider {
+    width: $range-width;
+}
+
+.range-slider__range {
+    width: calc(100% - (#{$range-label-width + 13px}));
+    height: $range-track-height;
+    border-radius: 5px;
+    background: $range-track-color;
+    outline: none;
+    padding: 0;
+    margin: 0 0 5px 0;
+
+    // Range Handle
+    &::-moz-range-progress {
+        background-color: $range-handle-color-hover;
+
+    }
+
+    &::-webkit-slider-thumb {
+        appearance: none;
+        width: $range-handle-size;
+        height: $range-handle-size;
+        border-radius: 50%;
+        background: $range-handle-color;
+        cursor: pointer;
+        transition: all .15s ease-in-out;
+        border: 4px solid var(--#{$prefix}white);
+
+        &:hover {
+            background: $range-handle-color-hover;
+            width: $range-handle-hover-size;
+            height: $range-handle-hover-size;
+        }
+    }
+
+    &:active::-webkit-slider-thumb {
+        background: $range-handle-color-hover;
+    }
+
+    &::-moz-range-thumb {
+        width: $range-handle-size;
+        height: $range-handle-size;
+        border: 0;
+        border-radius: 50%;
+        background: $range-handle-color;
+        cursor: pointer;
+        transition: all .15s ease-in-out;
+        border: 4px solid var(--#{$prefix}white);
+
+        &:hover {
+            background: $range-handle-color-hover;
+            width: $range-handle-hover-size;
+            height: $range-handle-hover-size;
+        }
+    }
+
+    &:active::-moz-range-thumb {
+        background: $range-handle-color-hover;
+        width: $range-handle-hover-size;
+        height: $range-handle-hover-size;
+    }
+
+    // Focus state
+    &:focus {
+        &::-webkit-slider-thumb {
+            box-shadow: 0 0 0 3px var(--#{$prefix}gray-100),
+            0 0 0 6px var(--#{$prefix}primary);
+        }
+    }
+}
+
+
+// Range Label
+.range-slider__value {
+    display: inline-block;
+    position: relative;
+    width: $range-label-width;
+    color: var(--#{$prefix}white);
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    background: $range-label-color;
+    padding: 5px 10px;
+    margin-left: 8px;
+
+    &:after {
+        position: absolute;
+        top: 8px;
+        left: -7px;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-right: 7px solid $range-label-color;
+        border-bottom: 7px solid transparent;
+        content: '';
+    }
+}

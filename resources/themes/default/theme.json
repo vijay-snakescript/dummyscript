@@ -1,0 +1,9 @@
+{
+    "name": "default",
+    "extends": "",
+    "asset-path": "themes/default",
+    "category": null,
+    "require": null,
+    "description": "Require default theme, every theme must extend the default theme in order to access static and common resources.",
+    "version": null
+}

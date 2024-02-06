@@ -1,0 +1,212 @@
+.form-control {
+    [theme-mode='dark'] & {
+        background: $secondary-dark;
+        border-color: var(--#{$prefix}dark-border-color);
+        color: var(--#{$prefix}white);
+    }
+}
+
+form {
+    label {
+        [theme-mode='dark'] & {
+            color: var(--bs-dark-text-color);
+        }
+    }
+}
+
+.upload-btn {
+    overflow: hidden;
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &.btn-outline-primary {
+        color: var(--#{$prefix}primary);
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    input[type='file'] {
+        cursor: pointer !important;
+        position: absolute;
+        opacity: 0;
+        right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+textarea {
+    [theme-mode='dark'] & {
+        background: var(--#{$prefix}secondary-dark);
+        border-color: var(--#{$prefix}dark-border-color);
+        color: var(--#{$prefix}white);
+    }
+}
+
+.password-input {
+    position: relative;
+
+    .form-control {
+        padding-right: 3rem !important;
+    }
+
+    .btn-input-icon {
+        border: 0px;
+        background-color: transparent;
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+
+        &.show-password {
+            &:before {
+                content: "\f1cc";
+                font-family: "Monster Tools";
+                color: $text-light;
+                font-size: 1rem;
+            }
+        }
+
+        &.hide-password {
+            &:after {
+                content: "\f1cb";
+                font-family: "Monster Tools";
+                color: $text-light;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.custom-textarea {
+    background: $input-bg;
+    border: $input-btn-border-width solid var(--#{$prefix}border-color);
+    border-radius: $border-radius;
+
+    [theme-mode='dark'] & {
+        background: var(--#{$prefix}secondary-dark);
+    }
+
+    textarea {
+        &.transparent {
+            background: transparent;
+            padding: 0;
+            border: 0;
+
+            &:hover,
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+
+.input-icon {
+    align-items: center;
+    display: flex;
+    position: relative;
+
+    span {
+        &.icon {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            padding: 0.375rem 0.75rem;
+            text-align: center;
+            white-space: nowrap;
+
+            i {
+                color: $text-light !important;
+            }
+        }
+    }
+
+    input {
+        padding-left: 36px !important;
+    }
+
+    &:hover,
+    &:focus {
+        span {
+            &.icon {
+                i {
+                    color: $primary !important;
+                }
+            }
+        }
+    }
+}
+
+.form-inline {
+    display: flex;
+    gap: 1rem;
+
+    .form-group {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        gap: 1rem;
+
+        label {
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+
+        &:nth-child(3) {
+            flex-grow: 0;
+            flex-basis: 0;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        display: grid;
+    }
+}
+
+.remove-field-icon {
+    position: absolute;
+    cursor: pointer;
+    right: -7px;
+    top: 13px;
+}
+
+
+.input-group:not(.has-validation)> :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+.input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control,
+.input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select {
+    [dir="rtl"] & {
+        border-top-right-radius: 0.375rem;
+        border-bottom-right-radius: 0.375rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+}
+
+.input-group> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    [dir="rtl"] & {
+        margin-left: -1px;
+        border-top-left-radius: 0.375rem;
+        border-bottom-left-radius: 0.375rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+.input-group {
+    @include media-breakpoint-down(sm) {
+        button,
+        input {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 0.375rem !important;
+        }
+    }
+}

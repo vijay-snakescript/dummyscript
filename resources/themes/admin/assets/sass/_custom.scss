@@ -1,0 +1,169 @@
+// Here you can add other styles
+@import 'simplebar/dist/simplebar.css';
+@import '@yaireo/tagify/src/tagify.scss';
+@import 'components/admin-nav';
+@import 'components/sortable';
+@import 'components/animations';
+@import 'components/settings';
+@import 'components/switches';
+@import 'components/range-slider';
+
+input[type=file]::file-selector-button {
+    border-radius: .2em;
+    background-color: var(--#{$prefix}primary);
+    color: $white;
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color: rgba(var(--#{$prefix}primary-rgb), .8);
+}
+
+.ck-editor__editable_inline {
+    min-height: 265px;
+}
+
+
+.dropdown-toggle {
+    &.dropdown-no-caret {
+        &:after {
+            content: none
+        }
+    }
+}
+
+.aside-xl {
+    max-width: 350px;
+}
+
+.aside-lg {
+    max-width: 300px;
+}
+
+.aside-md {
+    max-width: 250px;
+}
+
+.sticky-header-offset {
+    top: 130px !important;
+}
+
+.mh-300 {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.mh-400 {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+// match height
+.match-height {
+
+    >[class*='col'],
+    ul {
+        display: flex;
+        flex-flow: column;
+
+        >.card,
+        li {
+            flex: 1 1 auto;
+        }
+    }
+}
+
+.card-height {
+    max-height: 380px;
+    overflow-y: auto
+}
+
+
+
+// scrollbar
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dadce0;
+    background-clip: padding-box;
+    border: 4px solid transparent;
+    border-radius: 8px;
+    box-shadow: none;
+    min-height: 50px;
+    scrollbar-width: thin;
+
+    [theme-mode='dark'] & {
+        box-shadow: inset 0 0 0 10px #11101a;
+        background: transparent;
+    }
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+    border: none;
+}
+
+/* Firefox 64, 63 */
+div {
+    scrollbar-color: #dadce0 transparent;
+    scrollbar-width: thin;
+
+    [theme-mode='dark'] & {
+        scrollbar-color: #11101a #232230;
+    }
+}
+
+
+.dd {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dd-list {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .dd-list {
+        padding-left: 30px;
+    }
+
+    .dd-item {
+        .card {
+            width: 100%;
+            max-width: 500px;
+        }
+    }
+}
+
+.dd-placeholder {
+    margin: 5px 0;
+    padding: 0;
+    min-height: 30px;
+    background: #f2fbff;
+    border: 1px dashed #b6bcbf;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    max-width: 500px;
+}
+
+.dd-dragel {
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+
+    >.dd-item .dd-handle {
+        margin-top: 0;
+    }
+
+    .card-header {
+        -webkit-box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.1);
+    }
+}

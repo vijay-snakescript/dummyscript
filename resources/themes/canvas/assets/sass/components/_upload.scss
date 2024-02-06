@@ -1,0 +1,41 @@
+.upload-wrapper {
+    .file-upload {
+        height: 150px;
+        width: 150px;
+        border-radius: 100px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid $white;
+        overflow: hidden;
+        transition: all 1s;
+        background-image: linear-gradient(to bottom, $primary 50%, $white 50%);
+        background-size: 100% 200%;
+
+        input[type='file'] {
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        i {
+            color: $white;
+            transition: all 1s;
+            font-size: 3.5rem;
+        }
+
+        &:hover {
+            background-position: 0 -100%;
+
+            i {
+                color: $primary;
+                transition: all 1s;
+            }
+        }
+    }
+}

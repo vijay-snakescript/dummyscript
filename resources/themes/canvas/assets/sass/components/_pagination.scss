@@ -1,0 +1,21 @@
+.pagination {
+    .page-item {
+        margin: 2px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .page-link {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%; 
+            text-align: center;
+            line-height: 1.4;
+        }   
+    }
+}

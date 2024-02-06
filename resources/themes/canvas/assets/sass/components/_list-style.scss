@@ -1,0 +1,49 @@
+.list-check {
+    position: relative;
+    list-style: none;
+    line-height: 2rem;
+    color: $text-light;
+
+    li {
+        &:before {
+            font-family: "Monster Tools";
+            font-size: 1rem;
+        }
+    }
+
+    .check,
+    .cross,
+    .check-single {
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            left: -26px;
+            top: 0;
+            position: absolute;
+        }
+
+    }
+
+    .check {
+        &:before {
+            content: "\f1c3";
+            color: var(--#{$prefix}success);
+        }
+    }
+
+    .check-single {
+        &:before {
+            content: "\f1c2";
+            color: var(--#{$prefix}success);
+        }
+    }
+
+    .cross {
+        &:before {
+            content: "\f214";
+            color: var(--#{$prefix}danger);
+        }
+    }
+}

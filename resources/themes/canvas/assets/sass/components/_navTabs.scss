@@ -1,0 +1,39 @@
+.tabbar {
+    .nav-tabs {
+        margin-bottom: 30px;
+
+        [theme-mode='dark'] & {
+            border-color: var(--#{$prefix}secondary-dark);
+        }
+
+        .nav-link {
+            color: var(--#{$prefix}text-light);
+        }
+
+        .active {
+            color: var(--#{$prefix}primary);
+            background: var(--#{$prefix}white);
+            border-bottom: 0;
+        }
+
+        .nav-item {
+
+            .nav-link,
+            button {
+                background: transparent;
+                border: none;
+                color: $text-light;
+
+                &.active {
+                    background: transparent;
+                    border-bottom: 3px solid var(--#{$prefix}primary);
+                    color: var(--#{$prefix}primary);
+
+                    [theme-mode='dark'] & {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

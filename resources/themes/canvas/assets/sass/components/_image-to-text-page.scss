@@ -1,0 +1,67 @@
+.content-writing-page {
+
+    .banner-area {
+        background-image: url('../images/contant-rewriting-bg.svg');
+        padding: 50px 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 38px;
+            color: $black;
+
+            [theme-mode=dark] & {
+                color: var(--#{$prefix}white);
+            }
+        }
+
+        p {
+            color: $black;
+            font-size: 16px;
+
+            [theme-mode=dark] & {
+                color: var(--#{$prefix}white);
+            }
+        }
+
+        button {
+            min-width: 150px;
+            font-weight: 600;
+
+            &:last-child {
+
+                &:hover {
+                    color: var(--#{$prefix}white);
+                }
+            }
+        }
+    }
+
+
+    .easy-convert,
+    .text-to-image-upload-wrap {
+        background: var(--#{$prefix}bg-light);
+
+        [theme-mode=dark] & {
+            background: var(--#{$prefix}primary-dark);
+        }
+    }
+
+
+    .text-to-image-wrap {
+        .item {
+            padding-top: 30px;
+
+            .title {
+                font-size: 16px;
+                padding-bottom: 10px;
+                font-weight: 700;
+            }
+        }
+    }
+}

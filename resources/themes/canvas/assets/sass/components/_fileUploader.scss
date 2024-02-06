@@ -1,0 +1,270 @@
+// Upload Demo
+//
+.artisan-uploader {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    // background-color: var(--#{$prefix}gray-100);
+
+    .action-btn {
+        height: 32px;
+        width: 32px;
+        margin-right: .5rem;
+        position: relative;
+
+        &.wh-auto {
+            width: auto;
+            height: auto;
+        }
+
+        &:after {
+            font-family: "Monster Tools";
+            color: $white;
+            display: block;
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+
+        &.preview-item {
+            &:after {
+                content: "\f1cc";
+            }
+        }
+
+        &.rotate-left-item {
+            &:after {
+                content: "\f1cf";
+            }
+        }
+
+        &.rotate-right-item {
+            &:after {
+                content: "\f1d1";
+            }
+        }
+
+        &.delete-item {
+            &:after {
+                content: "\f214";
+            }
+        }
+    }
+
+    .uploader-extensions {
+        .badge {
+
+            &:first-child,
+            &:nth-child(6n) {
+                color: var(--#{$prefix}warning);
+                background-color: tint-color($warning, 90%);
+            }
+
+            &:nth-child(2n),
+            &:nth-child(7n) {
+                color: var(--#{$prefix}success);
+                background-color: tint-color($success, 90%);
+            }
+
+            &:nth-child(3n),
+            &:nth-child(8n) {
+                color: var(--#{$prefix}info);
+                background-color: tint-color($info, 90%);
+            }
+
+            &:nth-child(4n),
+            &:nth-child(9n) {
+                color: var(--#{$prefix}danger);
+                background-color: tint-color($danger, 90%);
+            }
+
+            &:nth-child(5n),
+            &:nth-child(10n) {
+                color: var(--#{$prefix}secondary);
+                background-color: tint-color($secondary, 90%);
+            }
+        }
+    }
+
+    label.file-drag {
+        width: 100%;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        transition: all .2s ease;
+        user-select: none;
+        border: 3px solid transparent;
+        min-height: 250px;
+
+        .file-loader {
+            display: none;
+        }
+
+        .is-loading {
+            .file-loader {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba($gray-300, .75);
+                z-index: 99;
+            }
+        }
+
+        &.hover {
+            border-color: var(--#{$prefix}gray-300);
+
+            .uploader-wrapper {
+                i {
+                    transform: scale(0.8);
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+
+    .uploader-wrapper {
+        width: 100%;
+
+        i {
+            font-size: 9rem;
+            color: #acafbd;
+            margin-bottom: 1rem;
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    .uploader-error {
+        display: block;
+        width: 100%;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    .files-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+
+        .pdf-preview {
+            text-align: center;
+            padding: 10px;
+            width: 188px;
+
+            &.item-sortable {
+                cursor: grab;
+            }
+
+            &:hover {
+                .item-actions {
+                    visibility: visible;
+                }
+            }
+
+            .item-actions {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 9;
+                display: flex;
+                padding: 1rem .5rem 0 .5rem;
+                visibility: hidden;
+                transition: all .2s ease-in;
+            }
+
+            .item-pdf {
+                width: 168px;
+                height: 214px;
+                background: $white;
+
+                canvas {
+                    max-width: 122px;
+                    max-height: 160px;
+                    display: flex;
+                }
+            }
+
+            .content {
+                display: block;
+
+                p {
+                    margin-bottom: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-weight: 600;
+                }
+
+                span {
+                    font-size: 75%;
+                }
+            }
+        }
+
+        .grid-item {
+            width: 25%;
+            padding: .5%;
+
+            .content {
+                display: block;
+
+                p {
+                    margin-bottom: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-weight: 600;
+                }
+
+                span {
+                    font-size: 75%;
+                }
+            }
+
+            .item-image {
+                height: 185px;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .delete-item {
+                    height: 32px;
+                    width: 32px;
+                    position: absolute;
+                    right: .5rem;
+                    top: .5rem;
+
+                    &:after {
+                        font-family: "Monster Tools";
+                        content: "\f214";
+                        color: $white;
+                        display: block;
+                        height: 20px;
+                        width: 20px;
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                        left: 50%;
+                        top: 50%;
+                    }
+                }
+
+            }
+        }
+    }
+}

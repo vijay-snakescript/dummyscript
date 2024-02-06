@@ -1,0 +1,28 @@
+.toast-container {
+
+    .toast {
+        position: relative;
+        padding: .5rem;
+
+        [theme-mode='dark'] & {
+            --#{$prefix}toast-bg: var(--#{$prefix}secondary-dark);
+        }
+
+        &.toast-success {
+            border-left: .25rem solid var(--#{$prefix}success);
+        }
+
+        &.toast-danger {
+            border-left: .25rem solid var(--#{$prefix}danger) !important;
+        }
+    }
+
+    .btn-close {
+        width: .5rem;
+        height: .5rem;
+        padding: 1px;
+        position: absolute;
+        top: 22px;
+        right: 14px;
+    }
+}

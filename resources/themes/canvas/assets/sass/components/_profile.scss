@@ -1,0 +1,112 @@
+.profile {
+    display: flex;
+    min-height: 600px;
+
+    @include media-breakpoint-down(md) {
+        display: block;
+    }
+
+    .user {
+        display: block;
+        position: relative;
+        width: 300px;
+        height: 100%;
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+            width: 100%;
+        }
+
+        // .user-data {
+
+        .profile-image {
+            position: relative;
+            overflow: hidden;
+            width: 80px;
+            border-radius: 10px;
+
+            @include media-breakpoint-down(md) {
+                margin: 0 auto;
+            }
+
+            .image {
+                position: relative;
+                width: 80px;
+                height: 80px;
+            }
+
+            a {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.5) !important;
+                height: 100%;
+                width: 100%;
+                display: none;
+
+                i {
+                    color: var(--#{$prefix}white);
+                    padding: 40%;
+                }
+            }
+
+            &:hover {
+                a {
+                    display: block;
+                }
+            }
+        }
+
+        .name {
+            p {
+                color: var(--#{$prefix}text-light);
+            }
+        }
+
+        // }
+
+        .list-group {
+            a {
+                display: block;
+                text-decoration: none;
+                color: var(--#{$prefix}text-light);
+
+                &:hover {
+                    opacity: .7;
+                }
+            }
+
+            .list-group-item {
+                &.active-link {
+                    a {
+                        color: var(--#{$prefix}primary);
+
+                        [theme-mode="dark"] & {
+                            color: var(--#{$prefix}white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .profile-info {
+        flex: 100%;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-left: 1px solid var(--#{$prefix}border-color);
+        padding-left: 30px;
+        min-height: 600px;
+
+        @include media-breakpoint-down(md) {
+            min-height: auto;
+            border-left: none;
+            padding: 0;
+        }
+
+        [theme-mode="dark"] & {
+            border-color: var(--#{$prefix}dark-border-color);
+        }
+    }
+}

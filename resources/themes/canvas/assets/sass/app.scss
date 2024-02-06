@@ -1,0 +1,79 @@
+// text font
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
+
+@import 'global/variables';
+@import 'variables';
+@import 'bootstrap';
+@import 'global';
+@import 'rtl';
+
+@import 'components/page-loader';
+@import 'components/search';
+@import 'components/buttons';
+@import 'components/navbar';
+@import 'components/heroTitle';
+@import 'components/breadcrumb';
+@import 'components/pagination';
+@import 'components/table';
+@import 'components/tooltip';
+@import 'components/signin';
+@import 'components/formatter';
+@import 'components/accordion';
+@import 'components/range-slider';
+
+@import 'components/form';
+@import 'components/cookies-consent';
+@import 'components/theme-mode';
+@import 'components/navTabs';
+@import 'components/fileUploader';
+@import 'components/toast';
+@import 'components/tools';
+@import 'components/checkbox-radio-button';
+@import 'components/reverse-text-generator';
+@import 'components/html-entities';
+@import 'components/strength-progress';
+@import 'components/list-style';
+@import 'components/upload';
+@import 'components/rating';
+@import 'components/resize-image';
+@import 'components/wp-theme-detector';
+@import 'components/qr-code-generator';
+@import 'components/pricing';
+@import 'components/toggle-button';
+@import 'components/ads';
+@import 'components/ads-free';
+@import 'components/report';
+@import 'components/progress-circle';
+@import 'components/website-screenshot';
+@import "components/icons";
+@import "components/blog";
+@import "components/inline-list";
+@import "components/profile";
+@import "components/fav-menu";
+@import "components/blog";
+@import "components/social";
+@import "components/ckeditor";
+@import "components/404";
+@import "components/back-to-top";
+
+@import "components/invoice";
+@import "components/wp-theme-detector";
+@import "components/wordpress-theme-detector";
+@import "components/seo-analysis";
+@import "components/image-converter";
+@import "components/css-minifier";
+@import "components/age-calculater-page";
+@import "components/image-to-text-page";
+@import "components/content-rewriting-page";
+@import "components/resize-image-page";
+
+@import 'global/color';
+
+@import 'partials/homeCards';
+@import 'partials/pageSidebar';
+// @import 'partials/aside';
+@import 'partials/footer';
+@import 'partials/favicon-generator';
+@import 'partials/meme-maker';
+
+@import 'basicLightbox/src/styles/main.scss'

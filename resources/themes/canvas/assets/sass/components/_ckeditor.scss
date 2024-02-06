@@ -1,0 +1,50 @@
+[theme-mode=dark] {
+
+    .ck.ck-editor__main>.ck-editor__editable,
+    .ck.ck-toolbar,
+    .ck.ck-list,
+    .ck.ck-toolbar svg {
+        background-color: var(--#{$prefix}secondary-dark);
+        color: var(--#{$prefix}white);
+        fill: var(--#{$prefix}white);
+        border-color: var(--#{$prefix}dark-border-color) !important;
+    }
+
+    .ck-editor__editable,
+    .ck-editor__editable:focus-visible {
+        border-color: var(--#{$prefix}dark-border-color) !important;
+    }
+
+    .ck-dropdown__button:hover button,
+    .ck.ck-button.ck-on,
+    a.ck.ck-button.ck-on,
+    .ck-dropdown__button:visited button,
+    .ck-toolbar__items>.ck.ck-button,
+    .ck-toolbar__items>a.ck.ck-button,
+    .ck.ck-button:not(.ck-disabled):hover,
+    a.ck.ck-button:not(.ck-disabled):hover,
+    .ck-toolbar__items>a.ck.ck-button:hover,
+    .ck-toolbar__items>a.ck.ck-button:focus,
+    .ck-toolbar__items>a.ck.ck-button:focus-visible {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .ck-button:focus,
+    .ck-button:hover,
+    .ck-button:focus-visible,
+    .ck.ck-button:active,
+    .ck.ck-button:focus,
+    a.ck.ck-button:active,
+    a.ck.ck-button:focus {
+        box-shadow: none;
+    }
+
+    .ck-button span {
+        color: white !important;
+    }
+
+    .ck.ck-dropdown__panel {
+        background-color: var(--#{$prefix}secondary-dark);
+    }
+}

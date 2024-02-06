@@ -1,0 +1,17 @@
+.rewrite-result {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+        p {
+            span {
+                text-decoration: underline;
+
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }            
+        }
+    }
+}

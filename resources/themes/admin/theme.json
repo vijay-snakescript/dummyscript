@@ -1,0 +1,9 @@
+{
+    "name": "admin",
+    "extends": "default",
+    "asset-path": "themes/admin",
+    "category": "admin",
+    "require": "1.0.0",
+    "description": "DotArtisan default admin theme for Monster Tools.",
+    "version": "1.0.0"
+}

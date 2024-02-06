@@ -1,0 +1,15 @@
+// If you want to override variables do it here
+@import "variables";
+@import "mixins/switches";
+
+$enable-ltr: true;
+/* stylelint-disable-line scss/dollar-variable-default */
+$enable-rtl: true;
+/* stylelint-disable-line scss/dollar-variable-default */
+
+// Import styles
+@import "@coreui/coreui/scss/coreui";
+@import "@morteza-jamali/lineicons/WebFont/scss/main";
+@import "layout";
+@import "components/icons";
+@import "custom";

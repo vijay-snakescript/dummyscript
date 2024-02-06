@@ -1,0 +1,64 @@
+.website-screenshot-detail {
+    .desktop {
+        .image {
+            background-image: url('/resources/themes/default/assets/images/mac.svg');
+            height: 452px;
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: contain;
+            padding-top: 9px;
+            padding-right: 25px;
+            padding-left: 25px;
+
+            @include media-breakpoint-down(lg) {
+                width: 282px;
+                height: 246px;
+                padding-top: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .image-wrap {
+                width: 524px;
+                margin: 0px auto;
+                overflow: auto;
+                height: 294px;
+                background: $white;
+
+                @include media-breakpoint-down(lg) {
+                    width: 261px;
+                    height: 150px;
+                }
+
+                .screenshot {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+
+    .mobile {
+        .image {
+            background-image: url('/resources/themes/default/assets/images/mobile-friendly.svg');
+            height: 563px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            padding: 38px 0;
+            width: 320px;
+
+            .image-wrap {
+                width: 273px;
+                margin: 0px auto;
+                overflow: auto;
+                height: 485px;
+                background: $white;
+
+                .screenshot {
+                    width: 100% !important;
+                }
+
+            }
+        }
+    }
+}

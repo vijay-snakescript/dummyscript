@@ -1,0 +1,105 @@
+nav {
+    padding: 0;
+    background: var(--#{$prefix}white);
+
+    [theme-mode='dark'] & {
+        background: var(--#{$prefix}primary-dark);
+    }
+
+    .navbar-toggler {
+        border: 0;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            [theme-mode='dark'] & {
+                color: var(--#{$prefix}white);
+            }
+        }
+    }
+
+    .nav-menu {
+        padding: 0;
+        li {
+
+            a {
+                color: var(--#{$prefix}secondary);
+                font-weight: 500;
+                font-size: 13px;
+
+                [theme-mode='dark'] & {
+                    color: var(--#{$prefix}white);
+                }
+
+                &.active {
+                    color: var(--#{$prefix}primary);
+                    border-bottom: 2px solid var(--#{$prefix}primary);
+                }
+
+                &:hover,
+                &:focus {
+                    color: var(--#{$prefix}primary);
+                }
+
+                @include media-breakpoint-down(lg) {
+                    padding-left: 0;
+                    padding-right: 0;
+                    line-height: 1;
+                }
+            }
+
+            &.nav-btn {
+                margin-left: 10px;
+
+                [dir="rtl"] {
+                    margin-left: 0;
+                    margin-right: 10px;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    margin: 0;
+                }
+
+                a {
+                    &.btn {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            li {
+                display: block;
+                position: relative;
+                padding: 13px 0;
+                width: 100%;
+
+                [dir="rtl"] & {
+                    text-align: right !important;
+                }
+
+                .dropdown-menu {
+                    width: 100%;
+                    position: relative;
+                    top: 0;
+                    padding: 0;
+                    border: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.dropdown {
+    .dropdown-menu {
+        [theme-mode='dark'] & {
+            background-color: var(--#{$prefix}primary-dark);
+        }
+    }
+}

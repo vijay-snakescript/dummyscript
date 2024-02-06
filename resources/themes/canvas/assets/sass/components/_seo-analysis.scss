@@ -1,0 +1,64 @@
+.seo-analysis {
+    .banner-area {
+        background-image: url('../images/seo-background.svg');
+        background-size: cover;
+        padding: 50px 0;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 38px;
+            color: $black;
+
+            [theme-mode=dark] & {
+                color: var(--#{$prefix}white);
+            }
+        }
+
+        p {
+            color: $black;
+            font-size: 16px;
+
+            [theme-mode=dark] & {
+                color: var(--#{$prefix}white);
+            }
+        }
+
+        button {
+            min-width: 150px;
+            font-weight: 600;
+
+            &:last-child {
+
+                &:hover {
+                    color: var(--#{$prefix}white);
+                }
+            }
+        }
+
+    }
+
+    .analysis-search-wrap {
+        background: $body-bg;
+
+        [theme-mode=dark] & {
+            background: var(--#{$prefix}primary-dark);
+        }
+
+        .analysis-search {
+            padding: 35px;
+            max-width: 750px;
+            margin: 0 auto;
+
+            button {
+                background-color: var(--#{$prefix}black);
+                min-width: 150px;
+            }
+        }
+    }
+
+}

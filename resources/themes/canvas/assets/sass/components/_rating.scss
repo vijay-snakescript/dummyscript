@@ -1,0 +1,37 @@
+.star-ratings {
+    unicode-bidi: bidi-override;
+    color: var(--#{$prefix}gray-200);
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+
+    .fill-ratings {
+        color: var(--#{$prefix}primary);
+        padding: 0;
+        position: absolute;
+        z-index: 1;
+        display: block;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+
+        [dir="rtl"] & {
+            left: auto;
+            right: 0;
+        }
+
+            // Allows us to grab the width of the span elements
+            span {
+                display: inline-block;
+            }
+        }
+
+        .empty-ratings {
+            padding: 0;
+            display: block;
+            z-index: 0;
+        }
+    }

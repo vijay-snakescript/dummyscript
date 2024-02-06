@@ -1,0 +1,176 @@
+// stylelint-disable declaration-no-important
+//
+// RTL Support
+//
+// Override Boostrap variables
+*[dir="rtl"] {
+    direction: auto;
+    unicode-bidi: embed;
+
+    .dropdown-menu-end {
+        right: auto !important;
+        left: 0 !important;
+    }
+
+    .dropdown-menu {
+        text-align: revert;
+    }
+
+    // Float
+    .float-start {
+        float: right !important;
+    }
+
+    .float-end {
+        float: left !important;
+    }
+
+    .text-end {
+        text-align: left !important;
+    }
+
+    .text-start {
+        text-align: right !important;
+    }
+
+    .me-1 {
+        margin-right: 0 !important;
+        margin-left: 0.25rem !important;
+    }
+
+    .me-2 {
+        margin-right: 0 !important;
+        margin-left: 0.5rem !important;
+    }
+
+    .me-3 {
+        margin-right: 0 !important;
+        margin-left: 1rem !important;
+    }
+
+    .me-4 {
+        margin-right: 0 !important;
+        margin-left: 1.5rem !important;
+    }
+
+    .ms-1 {
+        margin-left: 0 !important;
+        margin-right: 0.25rem !important;
+    }
+
+    .ms-2 {
+        margin-left: 0 !important;
+        margin-right: 0.5rem !important;
+    }
+
+    .ms-3 {
+        margin-left: 0 !important;
+        margin-right: 1rem !important;
+    }
+
+    .ms-4 {
+        margin-left: 0 !important;
+        margin-right: 1.5rem !important;
+    }
+
+    .ps-1 {
+        padding-left: inherit !important;
+        padding-right: 0.25rem !important;
+    }
+
+    .ps-2 {
+        padding-left: inherit !important;
+        padding-right: 0.5rem !important;
+    }
+
+    .ps-3 {
+        padding-left: inherit !important;
+        padding-right: 1rem !important;
+    }
+
+    .ps-4 {
+        padding-left: inherit !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .ps-5 {
+        padding-left: inherit !important;
+        padding-right: 3rem !important;
+    }
+
+    .pe-1 {
+        padding-right: inherit !important;
+        padding-left: 0.25rem !important;
+    }
+
+    .pe-2 {
+        padding-right: inherit !important;
+        padding-left: 0.5rem !important;
+    }
+
+    .pe-3 {
+        padding-right: inherit !important;
+        padding-left: 1rem !important;
+    }
+
+    .pe-4 {
+        padding-right: inherit !important;
+        padding-left: 1.5rem !important;
+    }
+
+    .pe-5 {
+        padding-right: inherit !important;
+        padding-left: 3rem !important;
+    }
+
+    // Margin and Padding
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+            @each $prop,
+            $abbrev in (margin: m, padding: p) {
+
+                @each $size,
+                $length in $spacers {
+                    .#{$abbrev}r#{$infix}-#{$size} {
+                        #{$prop}-right: 0 !important;
+                        #{$prop}-left: $length !important;
+                    }
+
+                    .#{$abbrev}l#{$infix}-#{$size} {
+                        #{$prop}-right: $length !important;
+                        #{$prop}-left: 0 !important;
+                    }
+                }
+            }
+
+            // Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+            @each $size,
+            $length in $spacers {
+                @if $size !=0 {
+                    .me#{$infix}-n#{$size} {
+                        margin-right: 0 !important;
+                        margin-left: -$length !important;
+                    }
+
+                    .ms#{$infix}-n#{$size} {
+                        margin-right: -$length !important;
+                        margin-left: 0 !important;
+                    }
+                }
+            }
+
+            // Some special margin utils
+            .me#{$infix}-auto {
+                margin-left: auto !important;
+                margin-right: initial !important;
+            }
+
+            .ms#{$infix}-auto {
+                margin-right: auto !important;
+                margin-left: initial !important;
+            }
+        }
+    }
+}

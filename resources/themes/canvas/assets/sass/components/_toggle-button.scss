@@ -1,0 +1,114 @@
+#content {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    height: auto;
+
+    >* {
+        display: inline-block;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    >input {
+        display: none;
+    }
+
+    >#top-switch-labels {
+        position: relative;
+        display: inline-block;
+        height: 44px;
+        width: 386px;
+        padding: 0;
+        border-radius: 50px;
+        font-size: 0;
+        border: 1px solid $border-color;
+
+        [theme-mode='dark'] & {
+            border-color: $dark-border-color
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 270px;
+        }
+    }
+}
+
+#top-switch-labels {
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+        transition: .3s;
+        background-color: $primary;
+    }
+
+    >label {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        width: 50%;
+        font-size: 16px;
+        font-weight: 600;
+        color: $text-light;
+        line-height: 40px;
+        border-radius: 20px;
+        cursor: pointer;
+        user-select: none;
+        transition: .3s;
+    }
+}
+
+#input-switch-monthly {
+    &:checked~#top-switch-labels {
+        &:before {
+            left: 0;
+        }
+
+        >#top-switch-label-monthly {
+            color: $white;
+            cursor: default;
+        }
+    }
+
+    &:checked~#monthly-wrapper {
+        display: block;
+    }
+}
+
+#input-switch-yearly {
+    &:checked~#top-switch-labels {
+        &:before {
+            left: 50%;
+        }
+
+        >#top-switch-label-yearly {
+            color: $white;
+            cursor: default;
+        }
+    }
+
+    &:checked {
+        display: none;
+    }
+
+    &:checked~#yearly-wrapper {
+        display: block;
+    }
+}
+
+#monthly-wrapper {
+    display: none;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+#yearly-wrapper {
+    display: none;
+    padding: 15px;
+    margin-top: 40px;
+}

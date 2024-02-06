@@ -1,0 +1,31 @@
+.resize-image {
+    display: flex;
+    flex-wrap: wrap;
+
+    .controller {
+        width: 300px;
+    }
+
+    .details {
+        flex: 1 0 0%;
+
+        .img-wrap {
+            padding-left: $container-padding-x;
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        .controller {
+            display: block;
+            width: 100%;
+        }
+
+        .details {
+            flex: auto;
+
+            .img-wrap {
+                padding-left: 0;
+            }
+        }
+    }
+}

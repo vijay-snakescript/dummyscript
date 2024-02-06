@@ -1,0 +1,117 @@
+.content-writing-page {
+
+    .banner-area {
+        background-image: url('../images/contant-rewriting-bg.svg');
+        padding: 50px 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 38px;
+            color: $black;
+
+            [theme-mode=dark] & {
+                color: var(--#{$prefix}white);
+            }
+        }
+
+        p {
+            color: $black;
+            font-size: 16px;
+
+            [theme-mode=dark] & {
+                color: var(--#{$prefix}white);
+            }
+        }
+
+        button {
+            min-width: 150px;
+            font-weight: 600;
+
+            &:last-child {
+
+                &:hover {
+                    color: var(--#{$prefix}white);
+                }
+            }
+        }
+    }
+
+    .content-writing-wrap {
+        padding: 100px 0;
+
+        .row {
+            .col-md-4 {
+                &:last-child {
+                    .item {
+                        border-right: 0px;
+                    }
+                }
+            }
+        }
+
+        .item {
+            padding: 30px 0;
+            border-right: 1px solid var(--#{$prefix}border-color);
+
+
+            .icon {
+                width: 70px;
+                height: 70px;
+                border-radius: 8px;
+                line-height: 65px;
+                background: var(--#{$prefix}primary);
+                margin-bottom: 30px;
+
+                svg {
+                    height: 30px;
+                    fill: var(--#{$prefix}white);
+                }
+            }
+
+            .content {
+                .title {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+
+                p {
+                    color: var(--#{$prefix}text-light);
+                }
+
+            }
+        }
+    }
+
+    .one-solution {
+        .item {
+            padding: 50px 30px;
+            text-align: center;
+            box-shadow: 0px 2px 5px 0px rgba(82, 82, 82, 0.15);
+
+            .icon {
+                svg {
+                    height: 40px;
+                    fill: var(--#{$prefix}primary);
+                }
+            }
+
+            .contant {
+                h2 {
+                    margin-top: 15px;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+
+                p {
+                    color: var(--#{$prefix}text-light);
+                }
+            }
+        }
+    }
+}

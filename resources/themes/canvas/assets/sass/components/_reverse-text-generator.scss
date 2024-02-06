@@ -1,0 +1,30 @@
+.panel-left-generator {
+    .panel-left {
+        display: flex;
+        flex-wrap: wrap;
+
+        .textarea {
+            width: 560px;
+        }
+
+        .controller {
+            -webkit-box-flex: 1;
+            flex: 1 0 0%;
+
+            .btn {
+                display: block;
+                width: 95%;
+
+                @include media-breakpoint-down(xl) {
+                    width: 100% !important;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(xl) {
+            .textarea {
+                width: 100%;
+            }
+        }
+    }
+}

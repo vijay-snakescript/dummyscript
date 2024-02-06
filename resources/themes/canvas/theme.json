@@ -1,0 +1,37 @@
+{
+    "name": "canvas",
+    "extends": "default",
+    "asset-path": "themes/canvas",
+    "category": "front",
+    "require": "1.0.0",
+    "description": "Monster tools defaul theme for Monster Tools.",
+    "version": "1.0.0",
+    "defaults": {
+        "light": {
+            "primary_color": "#FA8617",
+            "secondary_color": "#26282D",
+            "background_color": "#F2F3F4",
+            "border_color": "#E8E8E8",
+            "body_color": "#212529"
+        },
+        "dark": {
+            "primary_color": "#1A1927",
+            "secondary_color": "#232230",
+            "body_text_color": "#dbdbdb",
+            "border_color": "#272634",
+            "main_text_color": "#777777"
+        },
+        "body_font_size": ".875rem",
+        "h1_font_size": "1.5rem",
+        "h2_font_size": "1.25rem",
+        "h3_font_size": "1.125rem",
+        "h4_font_size": "1rem",
+        "h5_font_size": "1.09375rem",
+        "h6_font_size": "0.875rem",
+        "body_line_height": "1.5",
+        "body_font_family": "Inter",
+        "heading_font_family": "Inter",
+        "body_font_variant": "400;500;600;700;800",
+        "heading_font_variant": "400;500;600;700;800"
+    }
+}

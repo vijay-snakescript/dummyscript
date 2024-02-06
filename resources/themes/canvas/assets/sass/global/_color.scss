@@ -1,0 +1,61 @@
+.text-primary {
+    color: var(--#{$prefix}primary) !important;
+    fill: var(--#{$prefix}primary) !important;
+}
+
+.text-success {
+    color: var(--#{$prefix}success) !important;
+    fill: var(--#{$prefix}success) !important;
+}
+
+.text-secondary {
+    color: var(--#{$prefix}secondary) !important;
+    fill: var(--#{$prefix}secondary) !important;
+}
+
+.text-warning {
+    color: var(--#{$prefix}warning) !important;
+    fill: var(--#{$prefix}warning) !important;
+}
+
+.text-info {
+    color: var(--#{$prefix}info) !important;
+    fill: var(--#{$prefix}info) !important;
+}
+
+.text-danger {
+    color: var(--#{$prefix}danger) !important;
+    fill: var(--#{$prefix}danger) !important;
+}
+
+.link-color {
+    fill: var(--#{$prefix}link-color) !important;
+}
+
+.text-light {
+    fill: var(--#{$prefix}text-light) !important;
+}
+
+
+.bg-info-light {
+    background: rgba(var(--#{$prefix}info-rgb), .15) !important;
+
+    [theme-mode=dark] & {
+        background: rgba(var(--#{$prefix}info-rgb), .5) !important;
+    }
+}
+
+.bg-light {
+    background: var(--#{$prefix}input-bg);
+
+
+    [theme-mode='dark'] & {
+        background: var(--#{$prefix}secondary-dark);
+    }
+
+          &.dark-mode-light-bg {
+              [theme-mode='dark'] & {
+                  background: var(--#{$prefix}primary-dark);
+              }
+          }
+}

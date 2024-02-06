@@ -1,0 +1,69 @@
+$progress-bar-stroke-width: 1.6;
+$progress-bar-size: 160px;
+
+.progress-wrap {
+    position: relative;
+    text-align: center;
+
+    svg {
+        height: $progress-bar-size;
+        transform: rotate(-90deg);
+        width: $progress-bar-size;
+
+        @include media-breakpoint-down(xl) {
+                width: calc($progress-bar-size - 30px);
+        }
+    }
+
+    .circle {
+        fill: none;
+        stroke: var(--#{$prefix}border-color);
+        stroke-width: $progress-bar-stroke-width;
+    }
+
+    .progress {
+        fill: none;
+        stroke-dasharray: 100 100;
+        stroke-dashoffset: 100;
+        stroke-linecap: square;
+        stroke-width: $progress-bar-stroke-width;
+        transition: stroke-dashoffset 1s ease-in-out;
+
+        &.progress-success {
+            stroke: var(--#{$prefix}success);
+        }
+
+        &.progress-warning {
+            stroke: var(--#{$prefix}warning);
+        }
+
+        &.progress-danger {
+            stroke: var(--#{$prefix}danger);
+        }
+    }
+
+    .progress-value {
+        display: flex;
+        font-size: 36px;
+        text-align: center;
+        line-height: 1;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        span {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+//progress bar
+.progress {
+    &.progress-small {
+        height: 10px;
+    }
+}

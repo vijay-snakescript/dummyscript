@@ -1,0 +1,7 @@
+.formatter {
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid var(--#{$prefix}border-color);
+  padding: 5px;
+  color: $text-light;
+}

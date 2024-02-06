@@ -1,0 +1,85 @@
+.admin-pill-nav {
+    flex-shrink: 0;
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        cursor: pointer;
+        text-transform: capitalize;
+        white-space: nowrap;
+        margin-bottom: 5px;
+        color: var(--#{$prefix}body-color);
+        position: relative;
+        border-left: 4px solid transparent;
+        border-radius: 4px;
+        max-width: 100%;
+
+        a {
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: var(--#{$prefix}gray-200);
+        }
+
+        &.selected {
+            background-color: var(--#{$prefix}gray-200);
+            border-color: var(--#{$prefix}primary);
+            font-weight: 500;
+
+            .role-name {
+                color: var(--#{$prefix}primary);
+            }
+        }
+    }
+
+    .name {
+        color: var(--#{$prefix}body-color);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+
+        .role-name {
+            color: var(--#{$prefix}body-color);
+        }
+    }
+
+    .actions {
+        color: var(--#{$prefix}dark);
+        margin-left: auto;
+    }
+
+    .mat-icon-button {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+button.admin-pill-nav-mobile-selector {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--#{$prefix}gray-300);
+    padding: 15px;
+    text-transform: capitalize;
+    background-color: var(--#{$prefix}primary);
+
+    .mat-icon {
+        margin-left: auto;
+    }
+}
+
+.admin-pill-nav-menu.mat-menu-panel {
+    min-width: 200px;
+
+    .mat-menu-item {
+        text-transform: capitalize;
+    }
+
+    .selected {
+        color: var(--#{$prefix}dark);
+    }
+}

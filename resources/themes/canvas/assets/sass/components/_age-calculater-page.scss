@@ -1,0 +1,52 @@
+.age-calculater-page {
+
+    .banner-area {
+        background-image: url('../images/contant-rewriting-bg.svg');
+        padding: 150px 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 38px;
+            color: $black;
+
+            [theme-mode=dark] & {
+                color: var(--#{$prefix}white);
+            }
+        }
+
+        p {
+            color: $black;
+            font-size: 16px;
+
+            [theme-mode=dark] & {
+                color: var(--#{$prefix}white);
+            }
+        }
+
+        button {
+            min-width: 150px;
+            font-weight: 600;
+
+            &:last-child {
+
+                &:hover {
+                    color: var(--#{$prefix}white);
+                }
+            }
+        }
+    }
+
+    .easy-calculate {
+        padding: 100px 0;
+
+        p {
+            color: var(--#{$prefix}text-light);
+        }
+    }
+}

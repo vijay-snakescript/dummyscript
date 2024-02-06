@@ -1,0 +1,48 @@
+.night-mode {
+    .switch {
+        position: fixed;
+        bottom: 0;
+        z-index: 2;
+
+        .user-toggle {
+            button {
+                background: transparent;
+                border: 0;
+                padding: 5px;
+                color: var(--#{$prefix}white);
+                fill: var(--#{$prefix}white);
+
+                .theme-mode-dark,
+                .theme-mode-light {
+                    display: block;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 40px;
+                    font-size: 20px;
+                    line-height: 40px;
+                    font-family: 'Monster Tools';
+                }
+
+                .theme-mode-dark {
+                    background: var(--#{$prefix}text-light);
+
+                    &:after {
+                        content: "\f1e1";
+                        display: block;
+                        color: var(--#{$prefix}white);
+                    }
+                }
+
+                .theme-mode-light {
+                    background: var(--#{$prefix}primary-dark);
+
+                    &:after {
+                        content: "\f1f7";
+                        display: block;
+                        color: #ffc800;
+                    }
+                }
+            }
+        }
+    }
+}

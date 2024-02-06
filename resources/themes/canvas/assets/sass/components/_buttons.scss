@@ -1,0 +1,138 @@
+// icon button
+.btn {
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-padding-y: 0.5rem;
+    color: var(--#{$prefix}white);
+
+    [theme-mode='dark'] & {
+        color: var(--#{$prefix}white);
+    }
+}
+
+.btn-primary {
+    fill: var(--#{$prefix}white);
+    color: var(--#{$prefix}white) !important;
+
+    &:hover {
+        color: var(--#{$prefix}white) !important;
+        fill: var(--#{$prefix}white);
+    }
+}
+
+.btn-outline-primary {
+    color: var(--#{$prefix}primary) !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--#{$prefix}white) !important;
+    }
+}
+
+.btn-light {
+    background: #d7d7d7;
+
+    [theme-mode='dark'] & {
+        background: var(--#{$prefix}secondary-dark);
+    }
+
+    &:hover {
+        background: #b9b9b9 !important;
+
+        [theme-mode='dark'] & {
+            background: tint-color($secondary-dark, 10%) !important;
+            color: $dark-text-color;
+        }
+    }
+}
+
+.btn-outline-primary {
+    border: 1px solid var(--#{$prefix}primary);
+    color: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-color: var(--#{$prefix}white);
+
+    &:hover,
+    &:active,
+    &:focus-visible,
+    &:focus {
+        background: var(--#{$prefix}primary) !important;
+        border: 1px solid var(--#{$prefix}primary) !important;
+        color: $white;
+    }
+}
+
+.rounded-circle {
+    width: 39px;
+    height: 39px;
+    --#{$prefix}btn-padding-x: 0;
+}
+
+.badge {
+    &.badge-primary {
+        color: var(--#{$prefix}primary);
+        background-color: tint-color($primary, 90%);
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+
+    &.badge-success {
+        color: var(--#{$prefix}success);
+        background-color: tint-color($success, 90%);
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+
+    &.badge-warning {
+        color: var(--#{$prefix}warning);
+        background-color: tint-color($warning, 90%);
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+
+    &.badge-danger {
+        color: var(--#{$prefix}danger);
+        background-color: tint-color($danger, 90%);
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+
+    &.badge-info {
+        color: var(--#{$prefix}info);
+        background-color: tint-color($info, 90%);
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+}
+
+.btn-outline-secondary {
+    color: var(--#{$prefix}dark);
+}
+
+.btn-searches {
+    color: #fff;
+
+    i {
+        font-size: 1.5rem;
+        padding: .5rem;
+    }
+
+    .btn-google {
+        background-color: #0082f9;
+    }
+
+    .btn-yandex {
+        background-color: #f40909;
+    }
+
+    .btn-bing {
+        background-color: #008373;
+    }
+}
+
+.btn {
+    &.add-favorite-btn {
+        &.active {
+            color: var(--#{$prefix}white) !important;
+        }
+    }
+}

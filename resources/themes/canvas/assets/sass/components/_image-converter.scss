@@ -1,0 +1,79 @@
+.image-converter {
+
+    .banner-area {
+        background-image: url('../images/image-converter-bg.svg');
+        padding: 50px 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 38px;
+            color: $black;
+
+            [theme-mode=dark] & {
+                color: var(--#{$prefix}white);
+            }
+        }
+
+        p {
+            color: $black;
+            font-size: 16px;
+
+            [theme-mode=dark] & {
+                color: var(--#{$prefix}white);
+            }
+        }
+
+        button {
+            min-width: 150px;
+            font-weight: 600;
+
+            &:last-child {
+
+                &:hover {
+                    color: var(--#{$prefix}white);
+                }
+            }
+        }
+    }
+
+    .image-converter-upload-wrap {
+        width: 100%;
+        min-height: 240px;
+        background: var(--#{$prefix}bg-light);
+
+        [theme-mode=dark] & {
+            background: var(--#{$prefix}primary-dark);
+        }
+    }
+
+    .image-converter-wrap {
+
+        .item {
+            padding: 30px;
+
+            .an {
+                font-size: 35px;
+                color: var(--#{$prefix}primary);
+                margin-bottom: 20px;
+            }
+
+            .title {
+                font-size: 16px;
+                padding-bottom: 10px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid var(--#{$prefix}border-color);
+
+                [theme-mode=dark] & {
+                    border-color: var(--#{$prefix}dark-border-color);
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.cookie-consent-banner {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483645;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: transparentize($gray-100, 0.2) !important;
+    border-top: 1px solid var(--#{$prefix}border-color);
+
+    [theme-mode=dark] & {
+        background-color: transparentize($primary-dark, 0.1) !important;
+    }
+
+    .cookie-consent-banner-inner {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 1.5rem 1rem;
+
+        .cookie-consent-banner-copy {
+            margin-bottom: 1rem;
+
+            .cookie-consent-banner-header {
+                margin-bottom: 8px;
+                font-weight: normal;
+                font-size: 1.25rem;
+            }
+
+            .cookie-consent-banner-description {
+                font-weight: normal;
+                line-height: 1.5;
+            }
+        }
+
+        .cookie-consent-banner-actions {
+            button {
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+        }
+    }
+
+}

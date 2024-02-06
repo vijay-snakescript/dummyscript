@@ -1,0 +1,98 @@
+.table {
+    &.table-style {
+        border-collapse: separate;
+        border-spacing: 0 10px;
+
+        tr {
+            td:not(.skip-last):last-child {
+                border-left: 5px solid var(--#{$prefix}body-bg);
+
+                [dir="rtl"] & {
+                    border-left: 0;
+                    border-right: 5px solid var(--#{$prefix}body-bg);
+                }
+
+                [theme-mode='dark'] & {
+                    border-color: var(--#{$prefix}dark-border-color);
+                }
+            }
+
+            &:hover {
+                background: var(--#{$prefix}body-bg);
+
+                [theme-mode='dark'] & {
+                    background: var(--#{$prefix}primary-dark);
+                }
+
+
+                td:last-child {
+                    border-left: 5px solid var(--#{$prefix}white);
+
+                    [dir="rtl"] & {
+                        border-left: 0;
+                        border-right: 5px solid var(--#{$prefix}white);
+                    }
+
+                    [theme-mode='dark'] & {
+                        border-color: var(--#{$prefix}secondary-dark);
+                    }
+                }
+
+            }
+        }
+
+        &>thead {
+            &>tr {
+                &>td {
+                    border-top: 0px;
+                }
+            }
+        }
+
+        &>tbody {
+            &>tr {
+                box-shadow: 1px 0px 7px 0 rgba(215, 234, 243, 0.6);
+                background: var(--#{$prefix}white);
+
+                [theme-mode='dark'] & {
+                    box-shadow: 1px 0px 7px 0 rgba(0, 0, 0, 0.2);
+                    background: var(--#{$prefix}secondary-dark);
+                }
+
+                &>th,
+                &>td {
+                    border-top: 0px;
+                    vertical-align: middle;
+
+                    [theme-mode='dark'] & {
+                        color: var(--#{$prefix}dark-text-color);
+                    }
+
+                    &:last-child {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        &>tfoot {
+            &>tr {
+                &>td {
+                    border-top: 0px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+    [theme-mode='dark'] & {
+        border-color: var(--#{$prefix}dark-border-color);
+    }
+}

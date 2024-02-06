@@ -1,0 +1,27 @@
+.svg-wrap {
+
+    svg,
+    img {
+        max-width: 600px;
+        max-height: 600px;
+    }
+
+    @include media-breakpoint-down(lg) {
+
+        svg,
+        img {
+            max-width: 450px;
+            max-height: 450px;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+
+        svg,
+        img {
+            max-width: 300px;
+            max-height: 300px;
+        }
+    }
+
+}
